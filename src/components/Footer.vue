@@ -14,7 +14,7 @@
       :depth="3"
       class="icp"
       v-html="icp"
-      @click="jumpLink('https://icp.gov.moe/?keyword=20240520')"
+      @click="jumpLink('https://icp.gov.moe/?keyword=20242058')"
     />
   </footer>
 </template>
