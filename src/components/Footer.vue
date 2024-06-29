@@ -14,7 +14,7 @@
       :depth="3"
       class="icp"
       v-html="icp"
-      @click="jumpLink('https://beian.miit.gov.cn/')"
+      @click="jumpLink('https://icp.gov.moe/?keyword=20240520')"
     />
   </footer>
 </template>
@@ -44,7 +44,7 @@ footer {
     margin-bottom: 4px;
     .description {
       &::after {
-        content: "@ Copyright By";
+        content: "@ Copyright ";
         margin: 0 6px;
       }
     }
