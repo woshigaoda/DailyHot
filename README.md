@@ -1,128 +1,129 @@
 <img src="./screenshots/main.jpg" style="border-radius: 16px" />
-<!-- by 黄祥宝 -->
-# 今日热榜项目介绍
+<!-- by Huang Xiangbao -->
 
-## 网址
-https://hot.imsyy.top/
+# Today's Trending Topics - Project Introduction
 
-## 项目概述
-今日热榜是一个实时更新的热门话题聚合平台，汇集了全网各大平台的热点新闻和话题。该项目旨在为用户提供一个全面、及时的热点信息来源，帮助用户快速了解当前最热门的事件和讨论。
+## Website URL
+[https://hot.imsyy.top/](https://hot.imsyy.top/)
 
-## 平台特点
-- **多平台覆盖**：涵盖微博、抖音、知乎、哔哩哔哩、36氪等多个知名平台。
-- **实时更新**：每24分钟自动更新一次，确保信息的时效性。
-- **分类清晰**：按照不同的平台和类别进行分类，方便用户查找感兴趣的内容。
+## Project Overview
+Today's Trending Topics is a real-time updated platform that aggregates popular topics and news from various online platforms. This project aims to provide users with a comprehensive and timely source of trending information, helping them quickly understand the most discussed events and topics at any given moment.
 
-## 主要内容板块
-### 哔哩哔哩
-- 全球第一网红 vs 中国零食！给MrBeast，亿点点中国震撼！
-- 富士回应一张撕拉片被炒至300多元
-- 从莫斯科科看到更大的世界
+## Platform Features
+- **Multi-platform Coverage**: Includes well-known platforms such as Weibo, Douyin (TikTok), Zhihu, Bilibili, and 36Kr.
+- **Real-time Updates**: Automatically refreshes every 24 minutes to ensure the timeliness of information.
+- **Clear Categorization**: Organized by different platforms and categories for easy browsing based on user interests.
 
-### 微博
-- 比尔盖茨宣布将捐出几乎全部财富
-- 富士回应一张撕拉片被炒至300多元
-- 盘宝兔单狼人杀
+## Main Content Sections
 
-### 抖音
-- 油价或将重回6元时代
-- 英美就关税贸易协议条款达成一致
-- 胜利日阅兵的四个历史密码
+### Bilibili
+- MrBeast vs Chinese Snacks – A Global Sensation!
+- Fujifilm Responds to Film Being Resold for Over 300 RMB per Sheet
+- From Moscow to a Wider World
 
-### 知乎
-- 生活总会遇到不如意的事情
-- 坚决拒绝美方指责抹黑
-- 赵心童：天才的迷失与重生
+### Weibo
+- Bill Gates Announces He Will Donate Almost All His Wealth
+- Fujifilm Responds to Film Being Resold for Over 300 RMB per Sheet
+- Playful Werewolf Game
 
-### 36氪
-- 8点1氪 | 理想汽车回应网传李想年薪6.39亿；公积金贷款利率降0.25个百分点；茅台文旅官宣代言人张艺兴
-- 首台鸿蒙电脑评测首发：满眼都是鸿蒙，3000款应用够了吗？
-- SKP的惊人收入为何换不来资本信心？
+### Douyin (TikTok)
+- Oil Prices May Return to 6 RMB Era
+- UK and US Reach Agreement on Trade Tariff Terms
+- The Four Historical Secrets Behind the Victory Day Military Parade
 
-### 百度
-- 耿爽这段话的含金量还在飙升
-- 特大暴雨要来了
-- Citywalk带你探索莫斯科
+### Zhihu
+- Life Always Brings Unexpected Challenges
+- Firmly Reject US Accusations and Smear Campaigns
+- Zhao Xintong: The Fall and Redemption of a Prodigy
 
-### 少数派
-- 十年陪伴，腕上守护：Apple Watch 的健康故事
-- 本周看什么 | 最近值得一看的 9 部作品
-- 本周看什么 | 最近值得一看的 9 部作品
+### 36Kr
+- 8AM Brief | Li Xiang’s Alleged Salary of 639 Million Yuan; Mortgage Interest Rates Drop by 0.25%; PepsiCo Announces Zhang Yixing as New Spokesperson
+- First HarmonyOS Computer Review: It’s Full of HarmonyOS – Are 3,000 Apps Enough?
+- Why SKP’s Impressive Revenue Fails to Win Investor Confidence
 
-### IT之家
-- 小米就 SU7 Ultra 破纤维双风道前舱盖争议致歉，未交付订单限时改回铝制前舱盖
-- 华为首款鸿蒙电脑正式亮相
-- 吉利汽车：建议私有化极氪
+### Baidu
+- Geng Shuang’s Statement Continues to Gain Recognition
+- Severe Storm Is Coming
+- Citywalk Through Moscow
 
-### 澎湃新闻
-- 习近平同俄罗斯总统普京会谈
-- 商务部再回应中美经贸高层会谈：美方要拿出诚意、拿出行动
-- 圆桌 | 中俄权威专家详解双边关系：在新形势下共同应对挑战，共创发展机遇
+###少数派 (Shao Nian Pai / Young Generation)
+- Ten Years of Companionship: Apple Watch and Health Stories
+- What to Watch This Week | 9 Must-See Titles Recently
+- What to Watch This Week | 9 Must-See Titles Recently
 
-### 今日头条
-- 印度巴格利哈尔水电站重新开闸
-- 女子没有爸妈被指责 丈夫抱走孩子
-- 为什么这一纪念不能忘却
+### IT Home
+- Xiaomi Apologizes for SU7 Ultra Front Hood Controversy, Offers Aluminum Replacement for Undelivered Orders
+- Huawei Unveils Its First HarmonyOS Computer
+- Geely Proposes Delisting Zeekr
 
-### 百度贴吧
-- 印巴上百架战机在空中激战数小时
-- 韩棋院自嗨为柯洁事件改规则
-- 369越来越会拉扯了
+### The Paper
+- President Xi Meets with Russian President Putin
+- Ministry of Commerce Comments Again on China-US Economic Talks: The US Must Show Sincerity and Take Action
+- Roundtable Discussion | Chinese and Russian Experts Analyze Bilateral Relations: Facing Challenges Together and Creating New Opportunities
 
-### 稀土掘金
-- 尤雨溪宣布：Vue 生态正式引入 AI！重磅福利：Cursor 向学生免费开放一年！
-- 被问tsconfig.json 和 tsconfig.node.json 有什么作用，我懵了……
-- 这种小工具居然也能在某鱼卖钱？我用Python一天能写100个+纯白！
+### Toutiao (Headline News)
+- India’s Baglihar Hydropower Station Reopens
+- Woman Blamed for Having No Parents After Husband Takes Child
+- Why Should This Anniversary Never Be Forgotten?
 
-### 腾讯新闻
-- 见证历史与未来，一对跨越十年的关键握手
-- 驻苏丹使馆建议在苏中国公民尽快撤离
-- 西安5月突降冰雹，当地居民：骑车的手都被砸红
+### Baidu Tieba
+- Dozens of Fighter Jets Clash in Air Battle Between India and Pakistan
+- Korean Baduk Association Changes Rules in Response to Ke Jie Incident
+- 369 Becomes Increasingly Skilled at Mind Games
 
-### 豆瓣电影
-- [8.4] 破·地狱
-- [6.9] 焚城
-- [5.1] 怪兽
+###稀土掘金 (Juejin Tech Community)
+-尤雨溪 (Evan You) Announces AI Integration into Vue Ecosystem! Great Offer: Cursor Free for Students for One Year
+- Confused About tsconfig.json and tsconfig.node.json? I Was Too...
+- How Can Small Tools Like These Sell on Idle Marketplaces? I Can Write Over 100+ Scripts in Python in a Day!
 
-### 原神
-- 【和旋舞节】活动：参与获得活动专属武器「弓·冷寂进音」
-- 【悖理】5.6版本游戏问题集中反馈——5月8日更新
-- 【七圣召唤】铸镜研炼：巧策进斗
+### Tencent News
+- Witnessing History and the Future: A Decade-Spanning Handshake
+- Embassy Advises Chinese Citizens in Sudan to Evacuate Immediately
+- Hailstorm Hits Xi’an in May, Residents Report Red Hands from Impact
 
-## 使用说明
-用户可以通过访问 https://hot.imsyy.top/ 查看各个平台的最新热门话题和新闻。页面每24分钟自动更新一次，确保用户获取到最新的信息。用户可以根据自己的兴趣选择不同的平台和类别进行浏览。
+### Douban Movies
+- [8.4] Hell Beneath
+- [6.9] Burning
+- [5.1] Monster
 
-## 注意事项
-部分平台可能会出现加载失败的情况，如图中知乎板块所示，此时可以点击“重试”按钮进行刷新。
-<!-- by 黄祥宝 -->
+### Genshin Impact
+- [Harmonia Festival] Event: Obtain Exclusive Weapon "Bow – Cold Flame"
+- [Paradoxical Path] 5.6 Version Issue Feedback – Updated May 8th
+- [Seven Sacred Summons] Mirrorforged Refinement: Strategy in Combat
 
-<!-- by 黄祥宝 -->
-# 项目技术要点
+## Usage Instructions
+Users can visit [https://hot.imsyy.top/](https://hot.imsyy.top/) to view the latest trending topics and news across various platforms. The page automatically updates every 24 minutes to ensure users receive the most up-to-date information. Users can browse by platform or category based on personal interest.
 
-## 1. 前端框架与库
-- **Vue.js**：根据提供的 GitHub 仓库信息，该网站使用 Vue.js 作为主要的前端框架。
-- **Vite**：用于开发和构建工具，提供快速的热更新（HMR）和优化的构建输出。
+## Notes
+Some platforms may fail to load, such as the Zhihu section shown in the image. In this case, click the "Retry" button to reload the content.
+<!-- by Huang Xiangbao -->
 
-## 2. HTTPS 安全传输与 SSL 证书管理
-- **自动SSL证书**：Vercel 自动为所有自定义域名提供免费的 SSL 证书，简化了 HTTPS 的设置过程。
-- **强制HTTPS重定向**：可以通过 Vercel 的 `vercel.json` 配置文件轻松实现 HTTP 到 HTTPS 的强制重定向。
+# Technical Highlights of the Project
 
-## 3. 前端性能优化与资源管理
-- **CDN 加速**：Vercel 自带全球 CDN，能够自动分发静态资源，减少加载时间并提高用户体验。
-- **缓存策略**：
-  - 使用 `Cache-Control` 和 `ETag` 标头来控制浏览器缓存。
-  - 可以利用 Vercel 的边缘网络缓存功能进一步优化静态资源的加载速度。
-- **图片懒加载**：通过 HTML5 的 `loading="lazy"` 属性实现图片懒加载，减少首屏加载时间。
+## 1. Frontend Frameworks and Libraries
+- **Vue.js**: Based on repository information, the website primarily uses Vue.js as its frontend framework.
+- **Vite**: Used as the development and build tool, offering fast Hot Module Replacement (HMR) and optimized build output.
 
-## 4. 后端架构与实时通信
-- **API 调用**：尽管 Vercel 主要用于前端部署，但也可以集成 API 网关或无服务器函数（如 AWS Lambda 或 Vercel 自己的 Serverless Functions），以处理动态数据请求。
-- **WebSocket 支持**：如果需要 WebSocket 支持，通常需要额外的服务（如 Upstash Redis 或第三方服务），因为 Vercel 默认不直接支持 WebSocket。
+## 2. HTTPS Secure Transmission and SSL Certificate Management
+- **Automatic SSL Certificate**: Vercel automatically provides free SSL certificates for all custom domains, simplifying the HTTPS setup process.
+- **Force HTTPS Redirect**: HTTP to HTTPS redirection can be easily configured using the `vercel.json` configuration file.
 
-## 5. 开发调试与安全防护
-- **开发环境**：使用 Vite 提供的开发服务器进行本地开发，可以快速迭代和测试新功能。
-- **安全性增强**：通过 Vercel 的内置安全特性（如自动 HTTPS 和 DDoS 保护），以及前端代码中的输入验证和 Token 验证机制来保障应用的安全性。
+## 3. Frontend Performance Optimization and Resource Management
+- **CDN Acceleration**: Vercel includes built-in global CDN, automatically distributing static resources to reduce loading time and improve user experience.
+- **Caching Strategies**:
+  - Use `Cache-Control` and `ETag` headers to control browser caching.
+  - Utilize Vercel's edge network cache to further optimize static resource loading speed.
+- **Lazy Image Loading**: Implements HTML5 `loading="lazy"` attribute to reduce initial screen load time.
 
-## 6. 服务器运维与监控
-- **Vercel Dashboard**：提供详细的部署日志、性能指标和错误跟踪，帮助开发者监控应用状态。
-- **无缝扩展**：得益于 Vercel 的无服务器架构，应用可以根据流量自动扩展，无需手动干预。
-<!-- by 黄祥宝 -->
+## 4. Backend Architecture and Real-Time Communication
+- **API Calls**: Although Vercel mainly serves frontend deployment, it can integrate API gateways or serverless functions (e.g., AWS Lambda or Vercel's own Serverless Functions) to handle dynamic data requests.
+- **WebSocket Support**: For WebSocket support, additional services (such as Upstash Redis or third-party services) are usually required, as Vercel does not natively support WebSockets.
+
+## 5. Development Debugging and Security Protection
+- **Development Environment**: Uses Vite's development server for local development, enabling rapid iteration and testing of new features.
+- **Security Enhancements**: Leverages Vercel's built-in security features (such as automatic HTTPS and DDoS protection), along with input validation and token verification mechanisms within the frontend code to ensure application security.
+
+## 6. Server Operations and Monitoring
+- **Vercel Dashboard**: Provides detailed deployment logs, performance metrics, and error tracking to help developers monitor the application status.
+- **Seamless Scaling**: Thanks to Vercel's serverless architecture, the application can automatically scale based on traffic without manual intervention.
+<!-- by Huang Xiangbao -->
