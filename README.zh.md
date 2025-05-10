@@ -114,7 +114,7 @@ corepack enable
 
 ### Vercel 部署
 
-现已支持 Vercel 一键部署，无需服务器。
+现已支持 Vercel 一键部署无需服务器。
 
 > 请注意，需要修改环境变量中的 API 地址。
 
