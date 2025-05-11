@@ -1,174 +1,236 @@
-Today's Hot List Project Introduction
-Website
-https://hot.imsyy.top/
-Project Overview
-Today's Hot List is a real-time updated aggregation platform for hot topics. It brings together the hot news and topics from major platforms across the network. This project aims to provide users with a comprehensive and timely source of hot information, helping them quickly understand the most popular events and discussions currently.
-Platform Features
-Multi-platform Coverage: Covers multiple well-known platforms such as Weibo, Douyin, Zhihu, Bilibili, 36Kr, etc.
-Real-time Update: Automatically updates every 24 minutes to ensure the timeliness of information.
-Clear Classification: Classified according to different platforms and categories for users to easily find the content they are interested in.
-Main Content Sections
-Bilibili
-The world's first internet celebrity vs Chinese snacks! Giving MrBeast a little bit of Chinese shock!
-Fuji responds to a polaroid being 炒至 300 多元
-Seeing a bigger world from Moscow
-Weibo
-Bill Gates announces that he will donate almost all of his wealth
-Fuji responds to a polaroid being 炒至 300 多元
-Panbao Rabbit Single Werewolf Killing
-Douyin
-The oil price may return to the 6 yuan era
-The UK and the US reach an agreement on the terms of the tariff trade agreement
-Four historical passwords of the Victory Day military parade
-Zhihu
-Life will always encounter unsatisfactory things
-Resolutely reject the accusations and smears from the US side
-Zhao Xintong: The loss and rebirth of a genius
-36Kr
-8:01 Kr | Ideal Auto responds to the rumored annual salary of Li Xiang being 639 million; The housing provident fund loan interest rate is reduced by 0.25 percentage points; Moutai Culture and Tourism officially announces Zhang Yixing as the spokesperson
-The first evaluation of the first Hongmeng computer is released: Full of Hongmeng, are 3000 applications enough?
-Why can't SKP's astonishing revenue win capital confidence?
-Baidu
-The value of Geng Shuang's words is still soaring
-A 特大暴雨 is coming
-Citywalk takes you to explore Moscow
-Minority Report
-Ten years of companionship, protection on the wrist: The health story of Apple Watch
-What to watch this week | 9 works worth watching recently
-What to watch this week | 9 works worth watching recently
-IT Home
-Xiaomi apologizes for the controversy of the SU7 Ultra's broken fiber double-air duct front hood, and allows un-delivered orders to be changed back to an aluminum front hood within a limited time
-Huawei's first Hongmeng computer is officially unveiled
-Geely Automobile: Suggests the privatization of Zeekr
-The Paper
-Xi Jinping holds talks with Russian President Vladimir Putin
-The Ministry of Commerce responds again to the high-level Sino-US economic and trade talks: The US side needs to show sincerity and take action
-Roundtable | Authoritative Chinese and Russian experts explain the bilateral relations in detail: jointly respond to challenges and create development opportunities under the new situation
-Usage Instructions
-Users can access https://hot.imsyy.top/ to view the latest hot topics and news from various platforms. The page will be automatically updated every 24 minutes to ensure that users can obtain the latest information. Users can choose different platforms and categories to browse according to their interests.
-Notes
-There may be situations where some platforms fail to load, as shown in the Zhihu section in the picture. In this case, you can click the "Retry" button to refresh.
-Project Technical Points
-1. Front-end Framework and Libraries
-Vue.js: According to the information of the GitHub repository, this website uses Vue.js as the main front-end framework.
-Vite: Used as a development and build tool, providing fast hot module replacement (HMR) and optimized build output.
-2. HTTPS Secure Transmission and SSL Certificate Management
-Automatic SSL Certificate: Vercel automatically provides free SSL certificates for all custom domains, simplifying the HTTPS setup process.
-Forced HTTPS Redirection: It can be easily achieved by configuring the vercel.json file in Vercel to redirect HTTP to HTTPS.
-3. Front-end Performance Optimization and Resource Management
-CDN Acceleration: Vercel comes with a global CDN, which can automatically distribute static resources, reducing the loading time and improving the user experience.
-Caching Strategy:
-Use the Cache-Control and ETag headers to control browser caching.
-Utilize Vercel's edge network caching function to further optimize the loading speed of static resources.
-Lazy Loading of Images: Implement lazy loading of images through the loading="lazy" attribute in HTML5 to reduce the initial screen loading time.
-4. Back-end Architecture and Real-time Communication
-API Calls: Although Vercel is mainly used for front-end deployment, it can also integrate API gateways or serverless functions (such as AWS Lambda or Vercel's own Serverless Functions) to handle dynamic data requests.
-WebSocket Support: If WebSocket support is required, additional services (such as Upstash Redis or third-party services) are usually needed, because Vercel does not directly support WebSocket by default.
-5. Development Debugging and Security Protection
-Development Environment: Use the development server provided by Vite for local development, which allows for rapid iteration and testing of new features.
-Enhanced Security: Ensure the security of the application through Vercel's built-in security features (such as automatic HTTPS and DDoS protection), as well as input validation and token verification mechanisms in the front-end code.
-6. Server Operation and Maintenance and Monitoring
-Vercel Dashboard: Provides detailed deployment logs, performance indicators, and error tracking to help developers monitor the application status.
-Seamless Scalability: Thanks to Vercel's serverless architecture, the application can automatically scale according to traffic without manual intervention.
-<!-- by huang xiang bao -->
-Deployment
-bash
+<div align="center">
+  <img alt="logo" height="120" src="./public/favicon.png" width="120"/>
+  <h2>Today's Hot List</h2>
+  <p>Aggregating hot topics from across the web, all in one place.</p>
+  <br />
+  <img src="./screenshots/main.jpg" style="border-radius: 16px" />
+</div>
+<!-- by 黄祥宝 -->
+
+# Today's Hot List Project Introduction
+
+## Website URL
+[https://hot.imsyy.top/](https://hot.imsyy.top/)
+
+## Project Overview
+Today's Hot List is a real-time updated platform that aggregates trending news and topics from various platforms across the internet. The project aims to provide users with a comprehensive and timely source of trending information, helping them quickly understand the most popular events and discussions.
+
+## Platform Features
+- **Multi-platform Coverage**: Covers multiple well-known platforms including Weibo, Douyin, Zhihu, Bilibili, 36Kr, etc.
+- **Real-Time Updates**: Automatically updates every 24 minutes to ensure timeliness of information.
+- **Clear Categorization**: Organized by different platforms and categories for easy browsing of interesting content.
+
+## Main Content Sections
+### Bilibili
+- Global top influencer vs Chinese snacks! A bit of China shock for MrBeast!
+- Fujifilm responds to a single roll of film being sold for over $300
+- Seeing a bigger world from Moscow
+
+### Weibo
+- Bill Gates announces he will donate almost all his wealth
+- Fujifilm responds to a single roll of film being sold for over $300
+- Single player wolf game
+
+### Douyin
+- Oil prices may return to $6 era
+- UK and US reach agreement on tariff trade agreement terms
+- Four historical codes behind Victory Day Parade
+
+### Zhihu
+- Life always has its ups and downs
+- Firmly rejecting US accusations and smears
+- Zhao Xintong: Lost genius and rebirth
+
+### 36Kr
+- 8 AM Kr | Li Auto responds to rumors about Li Xiang's annual salary; Housing fund loan interest rate drops 0.25%; Maotai Tourism announces celebrity endorser Zhang Yixing
+- First HarmonyOS computer review: Full of HarmonyOS, are 3000 apps enough?
+- Why SKP's astonishing revenue can't win capital confidence?
+
+### Baidu
+- Geng Shuang's statement continues to gain weight
+- Heavy rainstorm is coming
+- Citywalk takes you to explore Moscow
+
+### Smaller Parties
+- Ten years of companionship, wrist health protection: Apple Watch's health story
+- What to watch this week | 9 works worth watching recently
+- What to watch this week | 9 works worth watching recently
+
+### IT Home
+- Xiaomi apologizes for controversy over SU7 Ultra's dual-channel front hood; orders not yet delivered will be changed back to aluminum
+- Huawei's first HarmonyOS computer officially launched
+- Geely Auto suggests privatizing Zeekr
+
+### The Paper
+- Xi Jinping meets Russian President Putin
+- Ministry of Commerce responds again to high-level economic talks between China and the US: The US needs to show sincerity and action
+- Roundtable | Insights from authoritative experts on bilateral relations: Jointly facing challenges and creating opportunities in the new situation
+
+### Toutiao
+- India's Baglihar hydropower station reopens
+- Woman without parents accused; husband takes child away
+- Why this memorial cannot be forgotten
+
+### Baidu Tieba
+- Dozens of fighter jets clash in mid-air for hours between India and Pakistan
+- Korean Chess Association changes rules due to Ke Jie incident
+- 369 becomes more adept at pulling strings
+
+### Rare Metal Mining
+- Evan You announces: Vue ecosystem officially introduces AI! Major benefit: Cursor offers free access for students for one year!
+- Asked about tsconfig.json and tsconfig.node.json, I was confused...
+- Such small tools can also sell money on some platforms? I can write 100+ pure whites with Python in a day!
+
+### Tencent News
+- Witness history and future, a key handshake spanning ten years
+- Sudanese embassy advises Chinese citizens in Sudan to evacuate as soon as possible
+- Xi'an experiences unexpected hailstorms in May, local residents report hands reddened by hailstones while riding bikes
+
+### Douban Movies
+- [8.4] Hellbreak
+- [6.9] Burning City
+- [5.1] Monster
+
+### Genshin Impact
+- [Harmony Dance Festival] Participate to get exclusive event weapon 'Bow·Cold Silence'
+- [Paradox] Feedback on version 5.6 game issues - Updated on May 8th
+- [Seven Saints Summon] Mirror Refinement: Clever Tactics
+
+## Usage Instructions
+Users can visit [https://hot.imsyy.top/](https://hot.imsyy.top/) to view the latest trending topics and news from various platforms. The page automatically updates every 24 minutes to ensure users receive the latest information. Users can browse based on their interests by selecting different platforms and categories.
+
+## Notes
+Some platforms may experience loading failures, as shown in the Zhihu section image. In such cases, users can click the "Retry" button to refresh.
+
+<!-- by 黄祥宝 -->
+
+# Project Technical Highlights
+
+## 1. Frontend Frameworks and Libraries
+- **Vue.js**: According to the provided GitHub repository information, this site uses Vue.js as the primary frontend framework.
+- **Vite**: Used for development and build tooling, providing fast hot module replacement (HMR) and optimized build outputs.
+
+## 2. HTTPS Secure Transmission and SSL Certificate Management
+- **Automatic SSL Certificates**: Vercel automatically provides free SSL certificates for all custom domains, simplifying the setup process for HTTPS.
+- **Forced HTTPS Redirect**: Can easily implement HTTP to HTTPS redirection via the `vercel.json` configuration file.
+
+## 3. Frontend Performance Optimization and Resource Management
+- **CDN Acceleration**: Vercel’s global CDN automatically distributes static resources, reducing load times and improving user experience.
+- **Caching Strategy**:
+  - Use `Cache-Control` and `ETag` headers to manage browser caching.
+  - Leverage Vercel’s edge network caching capabilities to further optimize static resource loading speeds.
+- **Lazy Loading**: Implement lazy loading for images or resources using HTML5’s `loading="lazy"` attribute to improve initial load performance.
+
+## 4. Backend Architecture and Real-Time Communication
+- **API Calls**: Although primarily used for frontend deployment, Vercel can integrate API gateways or serverless functions (such as AWS Lambda or Vercel’s own Serverless Functions) to handle dynamic data requests.
+- **WebSocket Support**: If WebSocket support is needed, additional services (like Upstash Redis or third-party services) are typically required since Vercel does not natively support WebSockets.
+
+## 5. Development Debugging and Security Enhancements
+- **Development Environment**: Use Vite’s development server for local development, allowing rapid iteration and testing of new features.
+- **Security Enhancements**: Utilize Vercel’s built-in security features (such as automatic HTTPS and DDoS protection) along with input validation and token verification mechanisms in frontend code to secure the application.
+
+## 6. Server Operations and Monitoring
+- **Vercel Dashboard**: Provides detailed deployment logs, performance metrics, and error tracking, assisting developers in monitoring application status.
+- **Seamless Scaling**: Thanks to Vercel’s serverless architecture, applications can scale automatically based on traffic without manual intervention.
+<!-- by 黄祥宝 -->
+
+<!-- by 梁展毓 -->
+## Deployment
+
+```bash
 # Install dependencies
 pnpm install
 
-# Development
+# Start development server
 pnpm dev
 
-# Packaging
+# Build for production
 pnpm build
-Method 1: Install pnpm using npm (recommended)
-If you have already installed Node.js (with npm included), you can install pnpm through the following command:
+Method One: Using npm to Install pnpm (Recommended)
+If you have Node.js installed (which includes npm), you can install pnpm with:
 
 bash
+深色版本
 npm install -g pnpm
 
-After installation, run again:
+After installation, run:
 
-bash
+```bash
 pnpm install
-Method 2: Use pnpm through Corepack (applicable to Node 16+)
+Method Two: Using Corepack with pnpm (For Node.js 16+)
 Enable Corepack:
 
 bash
+深色版本
 corepack enable
 
-Then try to install the dependencies again:
+Then try installing dependencies again:
 
-bash
+```bash
 pnpm install
 
-If it prompts that corepack is not available, please update Node.js to version v16 or higher first.
-Method 3: Check if pnpm is really installed
-After installing pnpm, you can verify whether the installation is successful through the following command:
+If Corepack is unavailable, update Node.js to v16 or higher.
 
-bash
+### Method Three: Verify pnpm Installation
+After installing pnpm, verify the installation with:
+
+```bash
 pnpm --version
 
-If the version number is output, it means the installation is successful.
-Problems and Solutions During Deployment
-Problem 1: The pnpm command was not found / is not an internal or external command
-Cause Analysis:
+If a version number is displayed, the installation was successful.
 
-pnpm is not installed correctly.
-After installation, it was not added to the system environment variables.
-An incorrect command-line tool was used (such as cmd, PowerShell, bash, etc. with different paths).
+#### Troubleshooting Deployment Issues
+##### Issue 1: pnpm command not found / not an internal or external command
+**Possible Causes**:
+- pnpm not correctly installed.
+- Not added to system environment variables.
+- Incorrect command line tool usage (e.g., cmd, PowerShell, bash paths differ).
 
-Solution Steps:
+**Resolution Steps**:
 
-Confirm whether pnpm is installed globally:
+Confirm if pnpm is globally installed:
 
-bash
+```bash
 pnpm --version
 
-If it prompts that the command does not exist, reinstall it:
+If the command does not exist, reinstall:
 
-bash
+```bash
 npm install -g pnpm
 
 Check if Node.js and npm are installed:
 
-bash
+```bash
 node --version
 npm --version
 
-If not installed, please go to the Node.js official website to download and install the LTS version.
+If not installed, download and install the LTS version from the [Node.js Official Website](https://nodejs.org/).
 
-For the Windows system, make sure to check the option "Add Node.js to the system path" during installation. Or manually add C:\Users\username\AppData\Roaming\npm to the system environment variable PATH.
+Ensure “Add Node.js to PATH” option is selected during installation on Windows systems. Alternatively, manually add `C:\Users\Username\AppData\Roaming\npm` to the system environment variable PATH.
 
-Try to use npx pnpm (not recommended for long-term use):
+Try using `npx pnpm install` temporarily (not recommended for long-term use).
 
-bash
-npx pnpm install
-Problem 2: The corepack enable command is not found
-Cause Analysis:
+##### Issue 2: corepack enable command not found
+**Possible Cause**: Current Node.js version is below v16, while Corepack is introduced starting from Node.js v16.
 
-The current Node.js version is lower than v16, and Corepack is a feature introduced starting from Node.js v16.
+**Resolution Steps**:
 
-Solution Steps:
+Check Node.js version:
 
-Check the Node.js version:
-
-bash
+```bash
 node --version
 
-If the version is lower than v16.x, please upgrade Node.js to the latest LTS version.
-
-It is recommended to use nvm (for Windows) or nvm.sh (for macOS/Linux) to manage multiple Node.js versions when upgrading Node.js. Or uninstall the old version and download and install the new version from the official website.
+If below v16.x, upgrade Node.js to the latest LTS version using nvm (Windows) or nvm.sh (macOS/Linux). Alternatively, uninstall the old version and download/install the latest version from the official website.
 
 Enable Corepack:
 
-bash
+```bash
 corepack enable
 
-Vercel Deployment
-Now supports one-click deployment on Vercel without the need for a server.
+### Vercel Deployment
+Now supports one-click deployment via Vercel without needing a server.
 
-Please note that you need to modify the API address in the environment variables.
+>Note: Modify the API address in environment variables.
 
-Powered by Vercel
-<!-- by Liang Zhanyu -->
+[Powered by Vercel](./public/ico/powered-by-vercel.svg)
+<!-- by 梁展毓 -->
