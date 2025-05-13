@@ -234,6 +234,7 @@ Now supports one-click deployment via Vercel without needing a server.
 
 [Powered by Vercel](./public/ico/powered-by-vercel.svg)
 <!-- by 梁展毓 -->
+<<<<<<< HEAD
 ## Developer Guide
 
 ### Code Structure
@@ -282,6 +283,8 @@ Project Root Directory
 
 If you're a new developer joining the project, this guide will help you quickly understand the codebase and its organization.
 <!-- by 沈家昊 -->
+=======
+>>>>>>> upstream/master
 
 <!-- by 程俊豪 -->
 User Guide for "Today's Hotlist"
