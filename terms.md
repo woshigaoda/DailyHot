@@ -62,8 +62,11 @@
 - Node.js Official Website / Node.js 官方网站
 - Corepack / Corepack
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/master
 # 术语表
 
 
@@ -74,6 +77,9 @@
 - Fork 仓库 (Fork Repository)
 =======
 >>>>>>> upstream/master
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
 >>>>>>> upstream/master
 
 <!-- by 程俊豪 -->
@@ -114,7 +120,7 @@ DNS错误	DNS Error	域名无法解析，网络连接失败
 iframe嵌入	iframe Embedding	网页嵌套另一个网页的技术
 组件化	Componentization	前端结构模块化，便于维护
 <!-- by 程俊豪 -->
-<<<<<<< HEAD
+
 <!-- by李如欣-->
 ## 专业术语词汇介绍与解释
 
@@ -170,5 +176,3 @@ iframe嵌入	iframe Embedding	网页嵌套另一个网页的技术
 | transition 类名   | 过渡动画类     | 定义进入/离开动画的 CSS 类（如 `.scale-enter-active`）。 |
 | `mode="out-in"`   | 过渡模式       | 控制过渡顺序（当前元素先离开，新元素再进入）。           |
 <!-- by李如欣-->
-=======
->>>>>>> upstream/master

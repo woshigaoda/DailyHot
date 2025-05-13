@@ -235,8 +235,11 @@ Now supports one-click deployment via Vercel without needing a server.
 [Powered by Vercel](./public/ico/powered-by-vercel.svg)
 <!-- by 梁展毓 -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> upstream/master
 ## Developer Guide
 
 ### Code Structure
@@ -287,6 +290,9 @@ If you're a new developer joining the project, this guide will help you quickly 
 <!-- by 沈家昊 -->
 =======
 >>>>>>> upstream/master
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
 >>>>>>> upstream/master
 
 <!-- by 程俊豪 -->
@@ -365,7 +371,8 @@ A: Some platforms (e.g., Weibo, Zhihu) support outbound links. This feature can 
 
 ✅ Use the Feedback button in Settings to report bugs or suggest new feature enhancements.
 <!-- by 程俊豪 -->
-<<<<<<< HEAD
+
+
 <!-- by李如欣-->
 ## Introduction
 
@@ -427,5 +434,3 @@ For self-hosting, DailyHot provides comprehensive guides:
 
 As an open-source project hosted on GitHub, DailyHot allows developers to extend or modify its functionality. For users seeking to stay informed about trending topics without algorithmic interference, DailyHot delivers a streamlined and efficient solution.
 <!-- by李如欣-->
-=======
->>>>>>> upstream/master
