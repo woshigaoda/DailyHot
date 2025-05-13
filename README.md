@@ -235,6 +235,11 @@ Now supports one-click deployment via Vercel without needing a server.
 [Powered by Vercel](./public/ico/powered-by-vercel.svg)
 <!-- by 梁展毓 -->
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> upstream/master
 ## Developer Guide
 
 ### Code Structure
@@ -283,6 +288,10 @@ Project Root Directory
 
 If you're a new developer joining the project, this guide will help you quickly understand the codebase and its organization.
 <!-- by 沈家昊 -->
+=======
+>>>>>>> upstream/master
+<<<<<<< HEAD
+>>>>>>> upstream/master
 =======
 >>>>>>> upstream/master
 
@@ -362,3 +371,66 @@ A: Some platforms (e.g., Weibo, Zhihu) support outbound links. This feature can 
 
 ✅ Use the Feedback button in Settings to report bugs or suggest new feature enhancements.
 <!-- by 程俊豪 -->
+
+
+<!-- by李如欣-->
+## Introduction
+
+### DailyHot - Trending Aggregation Platform
+
+DailyHot (今日热榜) is a platform that aggregates trending headlines from major websites, aiming to provide users with a simple and efficient solution for tracking internet-wide hot topics. The platform consists of two parts: a backend that offers APIs for aggregating trending content and a frontend that displays an intuitive ranking interface.
+
+#### Key Features
+
+- **Cross-Platform Content Aggregation:**  
+  Aggregates trending content from multiple popular websites, enabling users to grasp trending topics across the internet without visiting individual platforms.
+
+- **Multi-Source Support:**  
+  Supports content from platforms like 51CTO. Users can access specific platform data via URLs (e.g., `http://Synology_IP:6688/51cto`).
+
+- **RSS Subscription:**  
+  Users can append `?rss=true` to URLs to retrieve data in RSS format for easy subscription in RSS readers.
+
+- **Clean and Intuitive Interface:**  
+  A minimalist frontend design with clear categorization for quick browsing.
+
+#### Technical Highlights
+
+- **High-Performance APIs:**  
+  Backend APIs prioritize speed and responsiveness, facilitating seamless integration for developers.
+
+- **Flexible Deployment:**  
+  Supports multiple deployment methods, including Docker containerization, allowing self-hosting on NAS devices like Synology.
+
+- **Environment Variable Configuration:**  
+  Configurable parameters (e.g., API endpoints, ICP filing info) via environment variables.
+
+- **Decoupled Architecture:**  
+  Frontend and backend are decoupled: the frontend can be deployed serverlessly via Vercel, while the backend is provided as a Docker image.
+
+#### User Experience
+
+- **Cross-Device Compatibility:**  
+  Responsive design ensures optimal display on both mobile and desktop devices.
+
+- **Ad-Free Browsing:**  
+  Offers a clutter-free experience compared to ad-heavy platforms.
+
+- **Real-Time Updates:**  
+  Content is updated in real-time to deliver the latest trends.
+
+#### Deployment Options
+
+For self-hosting, DailyHot provides comprehensive guides:
+
+- **Backend Deployment:**  
+  Rapidly deploy the API using the Docker image `imsyy/dailyhot-api`.
+
+- **Frontend Deployment:**  
+  While no official frontend image is provided, users can deploy via Vercel or customize a Dockerfile based on project documentation.
+
+- **Docker Compose One-Click Deployment:**  
+  A sample `docker-compose.yml` file simplifies full-stack deployment.
+
+As an open-source project hosted on GitHub, DailyHot allows developers to extend or modify its functionality. For users seeking to stay informed about trending topics without algorithmic interference, DailyHot delivers a streamlined and efficient solution.
+<!-- by李如欣-->
