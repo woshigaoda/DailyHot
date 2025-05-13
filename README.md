@@ -149,8 +149,7 @@ pnpm build
 Method One: Using npm to Install pnpm (Recommended)
 If you have Node.js installed (which includes npm), you can install pnpm with:
 
-bash
-深色版本
+
 npm install -g pnpm
 
 After installation, run:
@@ -160,8 +159,7 @@ pnpm install
 Method Two: Using Corepack with pnpm (For Node.js 16+)
 Enable Corepack:
 
-bash
-深色版本
+
 corepack enable
 
 Then try installing dependencies again:
@@ -233,204 +231,288 @@ Now supports one-click deployment via Vercel without needing a server.
 >Note: Modify the API address in environment variables.
 
 [Powered by Vercel](./public/ico/powered-by-vercel.svg)
+
 <!-- by 梁展毓 -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> upstream/master
-## Developer Guide
 
-### Code Structure
-
-Below is an explanation of the directory structure and the purpose of each folder/file in the project:
-
-# Project Structure
-
-Project Root Directory
-
-- public
-  - favicon.png      # Website icon displayed in the browser tab.
-  - index.html       # Main HTML file serving as the entry point of the application.
-  - other static resources/     # Static resources that do not require processing (such as images, icons).
-
-- src
-  - assets        # Stores static resources like images, fonts, and style sheets.
-  - components    # Reusable Vue.js components.
-    - Header.vue   # Header component handling the top navigation bar.
-    - Footer.vue   # Footer component displaying the bottom content of the page.
-    - ...          # Other shared components.
-  - views         # Contains the main pages shown to users.
-    - Home.vue     # Home page view.
-    - Topic.vue    # Page displaying trending topics on a specific platform.
-    - ...          # Other page views.
-  - services      # API service files for handling backend communication.
-    - api.js       # Contains HTTP request logic used to fetch data from the server.
-    - utils.js     # Utility functions for handling API responses.
-  - App.vue          # Root Vue.js component serving as the entry point of the application.
-  - main.js          # Main JavaScript file initializing the Vue app.
-  - router.js        # Manages application routing and page navigation.
-
-- tests             # Contains unit tests and integration tests for the project.
-  - components/      # Tests for individual components.
-  - views/           # Tests for major pages.
-  - ...              # Other test files.
-
-- .github           # GitHub configuration files.
-  - ISSUE_TEMPLATE/  # GitHub issue templates.
-  - workflows/       # CI/CD automated testing and deployment workflows.
-  - ...              # Other GitHub-related files.
-
-- package.json         # Project metadata and dependency management.
-- pnpm-lock.yaml       # Lock file ensuring consistent dependency versions.
-- README.md            # The main documentation for the project.
-
-If you're a new developer joining the project, this guide will help you quickly understand the codebase and its organization.
 <!-- by 沈家昊 -->
-=======
->>>>>>> upstream/master
-<<<<<<< HEAD
->>>>>>> upstream/master
-=======
->>>>>>> upstream/master
+# Development Guide
+
+## Code Structure Overview
+
+Below is the project directory structure and a description of each folder/file:
+
+### Project Structure
+
+**Project Root Directory**
+
+- **public/**
+  - favicon.png # Website icon, displayed in browser tabs.
+  - index.html # Main HTML file, serves as the entry point of the application.
+  - other static assets/ # Static resources that do not require processing (e.g., images, icons).
+
+- **src/**
+  - assets # Folder for static assets such as images, fonts, and style sheets.
+  - components/ # Reusable Vue.js components.
+    - Header.vue # Header component, handles the top navigation bar.
+    - Footer.vue # Footer component, displays page footer content.
+    - ... # Other shared components.
+  - views/ # Contains main pages shown to users.
+    - Home.vue # Homepage view.
+    - Topic.vue # Page showing trending topics from specific platforms.
+    - ... # Other page views.
+  - services/ # Files handling backend communication and API services.
+    - api.js # Contains HTTP request logic for fetching data from the server.
+    - utils.js # Utility functions for processing API responses.
+  - App.vue # Root Vue.js component, entry point of the application.
+  - main.js # Main JavaScript file, initializes the Vue app.
+  - router.js # Handles routing and navigation within the app.
+
+- **tests/** # Unit and integration tests for the project.
+  - components/ # Tests for individual components.
+  - views/ # Tests for main page views.
+  - ... # Other test files.
+
+- **.github/** # GitHub configuration files.
+  - ISSUE_TEMPLATE/ # Templates for GitHub issues.
+  - workflows/ # CI/CD automation workflows for testing and deployment.
+  - ... # Other GitHub-related files.
+
+- package.json # Project metadata and dependency management.
+- pnpm-lock.yaml # Lockfile to ensure consistent dependency versions.
+- README.md # Main project documentation.
+
+This structure ensures separation of concerns, making the project easier to maintain and scale.
+
+<!-- by 沈家昊 -->
+
 
 <!-- by 程俊豪 -->
-User Guide for "Today's Hotlist"
-1. Feature Modules
-1. Multi-source Content Aggregation
-The system integrates real-time trending data from multiple mainstream content platforms. A backend crawler scheduler fetches and caches data periodically, while the frontend retrieves and displays it via unified RESTful APIs. Supported platforms include (but are not limited to):
+# DailyHot User Guide (User Guide)
 
-Bilibili – Popular videos, trending discussions, and user interactions;
+## I. Feature Modules
 
-Weibo – Hot search keywords and trending hashtags;
+### 1. Multi-source Content Aggregation
 
-Douyin (TikTok China) – Popular short video topics;
+The system integrates real-time trending data from multiple major platforms using a backend crawler scheduler that periodically fetches and caches content. The frontend loads and displays this content through a unified interface (RESTful API). Currently supported data sources include but are not limited to:
 
-Zhihu – High-traffic Q&A threads (with built-in error handling);
+- **Bilibili**: Popular video comments and play count rankings;
+- **Weibo**: Trending topics and popularity trends;
+- **Douyin**: Short video topics and热度;
+- **Zhihu**: High-engagement questions (supports abnormal state feedback);
+- **Other Platforms**: Baidu Hot Search, 36Kr News, Xiaohongshu Notes, IT Home Express,少数派 Recommendations, etc.
 
-Others – Including Baidu Hot Search, 36Kr Flash News, Xiaohongshu, ITHome, and Sspai.
+### 2. Live Refresh Logic
 
-2. Live Refresh Logic
-Each module includes a timestamp indicating the last update time. Data is refreshed via both automatic and manual triggers:
+Each data module displays "Last Updated Time" at the bottom to indicate the latest data fetching timestamp. Data is refreshed via both automatic and manual controls:
 
-The backend uses scheduled cron jobs to refresh cached content every 10 minutes;
+- Backend scheduled tasks (`cron jobs`) update the cache every 10 minutes by default;
+- Frontend can manually trigger an HTTP request to force UI refresh using the Refresh button.
 
-The frontend allows users to manually trigger a forced HTTP request to refresh UI content via the refresh button.
+### 3. User Interface and System Controls (UI Controls)
 
-3. UI Controls
+- **Manual Refresh Button**: Immediately initiates a frontend request and refreshes all module data;
+- **Theme Toggle**: Switch between dark mode and light mode, storing user preferences in `localStorage`;
+- **Settings Panel**: Opens the configuration panel where users can customize which platform modules to display;
+- **Retry Mechanism**: If an API call fails for a module, it enters an error state. Clicking the "Retry" button triggers a re-fetch.
 
-🔄 Manual Refresh – Sends an immediate request to update all modules;
+## II. Frequently Asked Questions (FAQ)
 
-🌙/☀️ Theme Toggle – Switch between light and dark modes; preferences are stored via localStorage;
+### Q1: Why does some module show "Failed to Load"?
 
-⚙️ Settings Panel – Open the configuration menu to toggle visibility of each content module;
+**Answer:** Possible causes include:
 
-🔁 Retry Mechanism – If a data fetch fails, the corresponding module will show a fallback error card with a retry button to re-trigger the API request.
+- Changes in the target platform's API structure (HTML/JSON format changes);
+- Network anomalies causing timeouts or DNS errors;
+- Target domain being blocked.
 
-2. Frequently Asked Questions (FAQ)
-Q1: Why does a module show "Failed to Load"?
-A: Possible causes include:
+**Recommendations**:
+- Check your network environment;
+- Click the "Retry" button inside the module;
+- If still unable to load, check the browser console log (F12) and report the specific error.
 
-Target platform's page structure (HTML/JSON) has changed;
+### Q2: How to troubleshoot if the trend list hasn't updated for a long time?
 
-Network issues (e.g. timeouts, DNS errors);
+**Answer**:
+- Check whether browser caching is enabled (recommended to use Ctrl+F5 for a hard refresh);
+- If the server-side cache has not expired, the data may be outdated;
+- Enable "Developer Mode" in settings to see the original API response timestamps for each module.
 
-IP or user-agent blocks.
-Troubleshooting Tips:
+### Q3: Why is the time display inaccurate?
 
-Check your internet connection;
+**Answer**: The client timestamp is calculated based on `Date.now()` in the local browser. If the device system time is incorrect, the "X minutes ago" prompt will also be off. It is recommended to synchronize the system time.
 
-Click the “Retry” button in the failed module;
+### Q4: Does it support clicking hotwords to jump to the original article?
 
-Open the browser console (F12) for detailed logs and report errors if necessary.
+**Answer**: Currently supports partial platform hotword jumps (e.g., Weibo, Zhihu), but you need to enable the "Link Jump" option in settings. Some platforms may have restrictions due to anti-scraping measures or incomplete data structures.
 
-Q2: The content hasn’t updated for a long time — what should I do?
-A:
+## III. Best Practices
 
-Try a hard refresh (Ctrl+F5) to bypass browser caching;
+- It is recommended to check the trend list daily, especially during morning rush hours (7–9 AM) and lunchtime (12–1 PM) to get the latest content trends;
+- If a certain module frequently fails to load, temporarily disable it in settings to improve performance;
+- Use modern browsers (Chrome 90+, Edge, Firefox) to avoid compatibility issues;
+- To embed into other platforms, the webpage can be encapsulated as an iFrame or modularized for secondary development;
+- Encourage submitting bug reports and feature suggestions through the "Feedback" section under "Settings" to help continuously optimize the system.
 
-The server may still be within its cache window (e.g., last 10-minute interval);
-
-Enable “Developer Mode” in settings to inspect raw API timestamps per module.
-
-Q3: Why is the "x minutes ago" time incorrect?
-A: The timestamp is calculated using the browser’s local Date.now(). If your system time is incorrect, the relative time display will be inaccurate. Please sync your system clock.
-
-Q4: Can I click on keywords to view the original source?
-A: Some platforms (e.g., Weibo, Zhihu) support outbound links. This feature can be enabled via the "Link Redirect" option in Settings. Others may not support it due to anti-scraping protection or missing URLs in source data.
-
-3. Best Practices
-✅ Check the hotlist during peak periods (e.g., 7–9 AM, 12–1 PM) to capture trending topics efficiently;
-
-✅ Temporarily disable unstable modules in Settings if they frequently fail to load, which helps performance;
-
-✅ Use a modern browser (Chrome 90+, Edge, Firefox) to ensure compatibility and smooth experience;
-
-✅ For embedding use cases, wrap the application as an iframe or extract components for modular use;
-
-✅ Use the Feedback button in Settings to report bugs or suggest new feature enhancements.
 <!-- by 程俊豪 -->
 
 
-<!-- by李如欣-->
-## Introduction
+<!-- by 李如欣 -->
+## Key Features
 
-### DailyHot - Trending Aggregation Platform
+- **Aggregated Trending Content Across Platforms**  
+  DailyHot tracks and aggregates trending content from multiple popular websites so users don’t need to visit each platform individually to stay informed.
 
-DailyHot (今日热榜) is a platform that aggregates trending headlines from major websites, aiming to provide users with a simple and efficient solution for tracking internet-wide hot topics. The platform consists of two parts: a backend that offers APIs for aggregating trending content and a frontend that displays an intuitive ranking interface.
+- **Multi-platform Support**  
+  Supports various content sources, including but not limited to 51CTO and other professional websites. Users can directly access specific platform trending lists by entering URLs like `http://synology-ip:6688/51cto`.
 
-#### Key Features
+- **RSS Subscription Functionality**  
+  Users can append `?rss=true` to URLs to receive RSS-formatted data, making it easy to subscribe to favorite trending content in RSS readers.
 
-- **Cross-Platform Content Aggregation:**  
-  Aggregates trending content from multiple popular websites, enabling users to grasp trending topics across the internet without visiting individual platforms.
+- **Clean and Intuitive Interface**  
+  The front-end design is clean and well-organized, allowing users to quickly browse trending content across different categories.
 
-- **Multi-Source Support:**  
-  Supports content from platforms like 51CTO. Users can access specific platform data via URLs (e.g., `http://Synology_IP:6688/51cto`).
+---
 
-- **RSS Subscription:**  
-  Users can append `?rss=true` to URLs to retrieve data in RSS format for easy subscription in RSS readers.
+## Technical Features
 
-- **Clean and Intuitive Interface:**  
-  A minimalist frontend design with clear categorization for quick browsing.
+- **Fast and Responsive APIs**  
+  The backend APIs are optimized for performance and fast response times, making them easy to integrate for developers.
 
-#### Technical Highlights
+- **Flexible Deployment Options**  
+  Supports various deployment methods, including Docker-based deployment. Users can set up the service on devices such as Synology NAS.
 
-- **High-Performance APIs:**  
-  Backend APIs prioritize speed and responsiveness, facilitating seamless integration for developers.
+- **Environment Variable Configuration**  
+  API address and ICP filing information can be configured flexibly via environment variables.
 
-- **Flexible Deployment:**  
-  Supports multiple deployment methods, including Docker containerization, allowing self-hosting on NAS devices like Synology.
+- **Frontend-Backend Separated Architecture**  
+  The project adopts a frontend-backend decoupled architecture, with frontend deployable via Vercel (serverless) and backend available as a Docker image.
 
-- **Environment Variable Configuration:**  
-  Configurable parameters (e.g., API endpoints, ICP filing info) via environment variables.
+---
 
-- **Decoupled Architecture:**  
-  Frontend and backend are decoupled: the frontend can be deployed serverlessly via Vercel, while the backend is provided as a Docker image.
+## User Experience
 
-#### User Experience
+- **Cross-device Compatibility**  
+  The platform provides good display effects on both mobile phones and computers, with responsive design ensuring optimal browsing experience across devices.
 
-- **Cross-Device Compatibility:**  
-  Responsive design ensures optimal display on both mobile and desktop devices.
+- **Ad-free Interface**  
+  Compared to platforms with heavy ads, DailyHot offers a clean and distraction-free browsing experience.
 
-- **Ad-Free Browsing:**  
-  Offers a clutter-free experience compared to ad-heavy platforms.
+- **Real-time Updates**  
+  Trending content is updated in real-time, allowing users to access the latest trending news promptly.
 
-- **Real-Time Updates:**  
-  Content is updated in real-time to deliver the latest trends.
+---
 
-#### Deployment Options
+## Deployment Options
 
-For self-hosting, DailyHot provides comprehensive guides:
+For users who wish to self-host, DailyHot provides full deployment instructions:
 
-- **Backend Deployment:**  
-  Rapidly deploy the API using the Docker image `imsyy/dailyhot-api`.
+- **Backend Deployment**  
+  The API service can be rapidly deployed using Docker with the image `imsyy/dailyhot-api`.
 
-- **Frontend Deployment:**  
-  While no official frontend image is provided, users can deploy via Vercel or customize a Dockerfile based on project documentation.
+- **Frontend Deployment**  
+  While no official frontend image is provided, users can refer to the project documentation and deploy via Vercel or build a custom Dockerfile.
 
-- **Docker Compose One-Click Deployment:**  
-  A sample `docker-compose.yml` file simplifies full-stack deployment.
+- **Docker Compose One-click Deployment**  
+  A sample `docker-compose.yml` file is provided in the project for quick full-stack setup.
 
-As an open-source project hosted on GitHub, DailyHot allows developers to extend or modify its functionality. For users seeking to stay informed about trending topics without algorithmic interference, DailyHot delivers a streamlined and efficient solution.
-<!-- by李如欣-->
+---
+
+## Open Source and Extensibility
+
+DailyHot is an open-source project hosted on GitHub, allowing developers to perform secondary development or extend functionality as needed. For users who want to keep track of trending content without being overwhelmed by algorithm-recommended feeds, DailyHot offers a simple and efficient solution.
+<!-- by 李如欣 -->
+
+<!-- by 廖天宇 -->
+# DailyHot Security and Privacy Architecture Plan
+
+## Comprehensive Security Defense System
+
+### 1. Multi-layer XSS Defense Matrix
+
+#### Input Layer Protection
+- HMAC signature verification mechanism for content sources
+- Machine learning-based content threat scoring system using TensorFlow.js
+
+#### Processing Layer Sanitization
+
+```javascript
+// Multi-stage content sanitization workflow
+const purifiedContent = DOMPurify.sanitize(
+  unescapeHtml(
+    decodeURIComponent(rawContent)
+  ), 
+  {
+    SANITIZE_DOM: false,   // Disable DOM node sanitization
+    RETURN_TRUSTED_TYPE: true  // Return trusted type object
+  }
+);
+Output Layer Control
+Dynamic Content Security Policy Configuration
+
+Content-Security-Policy: 
+  default-src 'self';
+  script-src 'self' 'wasm-unsafe-eval' 'strict-dynamic' 'nonce-{random-value}';
+  style-src 'self' 'unsafe-inline';
+  object-src 'none';
+  base-uri 'none';
+  require-trusted-types-for 'script'
+2. Advanced CSRF Protection Framework
+Dual-token Architecture:
+Static Token (embedded in page meta tags)
+Dynamic JWT Token (refreshed per request)
+Enhanced Same-Origin Policy Configuration
+
+app.use(helmet({
+  crossOriginEmbedderPolicy: true,         // Cross-origin embedding policy
+  crossOriginOpenerPolicy: "same-origin", // Window opening restriction
+  crossOriginResourcePolicy: "same-site"  // Resource loading restriction
+}));
+3. Dependency Security Governance
+Lifecycle Stage	Security Measures	Toolchain
+Procurement Phase	SBOM generation / License scanning	syft + FOSSA
+Build Phase	Container signing / Immutable builds	cosign + Bazel
+Runtime Phase	Behavior monitoring / Memory protection	eBPF + NX technology
+4. API Security Gateway
+
+User Request → Cloudflare WAF → Kong Gateway (JWT validation) → Business Logic
+↓
+OPA Policy Engine
+Request body validation based on OpenAPI spec
+Three-dimensional rate limiting (by user/IP/endpoint)
+Privacy Enhancement Implementation Plan
+1. Data Minimization Architecture
+Differential privacy data processing
+
+from pydifferential_privacy import LaplaceMechanism
+
+def process_data():
+    raw = collect_metrics()
+    return LaplaceMechanism(raw, epsilon=0.5)  # ε=0.5 privacy budget
+2. GDPR Compliance Automation
+Data flow mapping example
+
+data_flow:
+  - Source: User Registration
+    Processors: [Analytics Service, CRM]
+    Legal Basis: Explicit Consent
+    Retention Period: 180 days
+    Cross-border Transfer: [AWS Frankfurt]
+Implementation Roadmap
+Phase	Timeline	Milestone	KPI
+Foundation Strengthening	Week 1–2	CSP Deployment Completed	XSS Attack Block Rate ≥99%
+Enhanced Protection	Week 3–4	API Gateway Launch	CSRF Defense Success Rate 100%
+Privacy Engineering	Week 5–6	DSAR Portal Delivered	GDPR Request Response Time <24h
+Advanced Protection	Week 7–8	TEE Environment Deployed	Zero Data Breach Incidents
+Best Practices
+Adopt blue-green deployment for gradual rollout
+Conduct red team penetration testing at each stage
+Establish a Security Champion program
+Maintain automated security test coverage ≥80%
+Technology Stack Overview
+Layer	Technology
+Frontend Security	Trusted Types + CSP Level 3
+Backend Security	JWT + HMAC dual-factor authentication
+Privacy Computing	Microsoft SEAL homomorphic encryption library
+Compliance Audit	OneTrust automated assessment platform
+
+<! by -- 廖天宇 -- >
