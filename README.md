@@ -234,6 +234,57 @@ Now supports one-click deployment via Vercel without needing a server.
 
 [Powered by Vercel](./public/ico/powered-by-vercel.svg)
 <!-- by 梁展毓 -->
+<<<<<<< HEAD
+## Developer Guide
+
+### Code Structure
+
+Below is an explanation of the directory structure and the purpose of each folder/file in the project:
+
+# Project Structure
+
+Project Root Directory
+
+- public
+  - favicon.png      # Website icon displayed in the browser tab.
+  - index.html       # Main HTML file serving as the entry point of the application.
+  - other static resources/     # Static resources that do not require processing (such as images, icons).
+
+- src
+  - assets        # Stores static resources like images, fonts, and style sheets.
+  - components    # Reusable Vue.js components.
+    - Header.vue   # Header component handling the top navigation bar.
+    - Footer.vue   # Footer component displaying the bottom content of the page.
+    - ...          # Other shared components.
+  - views         # Contains the main pages shown to users.
+    - Home.vue     # Home page view.
+    - Topic.vue    # Page displaying trending topics on a specific platform.
+    - ...          # Other page views.
+  - services      # API service files for handling backend communication.
+    - api.js       # Contains HTTP request logic used to fetch data from the server.
+    - utils.js     # Utility functions for handling API responses.
+  - App.vue          # Root Vue.js component serving as the entry point of the application.
+  - main.js          # Main JavaScript file initializing the Vue app.
+  - router.js        # Manages application routing and page navigation.
+
+- tests             # Contains unit tests and integration tests for the project.
+  - components/      # Tests for individual components.
+  - views/           # Tests for major pages.
+  - ...              # Other test files.
+
+- .github           # GitHub configuration files.
+  - ISSUE_TEMPLATE/  # GitHub issue templates.
+  - workflows/       # CI/CD automated testing and deployment workflows.
+  - ...              # Other GitHub-related files.
+
+- package.json         # Project metadata and dependency management.
+- pnpm-lock.yaml       # Lock file ensuring consistent dependency versions.
+- README.md            # The main documentation for the project.
+
+If you're a new developer joining the project, this guide will help you quickly understand the codebase and its organization.
+<!-- by 沈家昊 -->
+=======
+>>>>>>> upstream/master
 
 <!-- by 程俊豪 -->
 User Guide for "Today's Hotlist"

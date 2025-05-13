@@ -238,6 +238,57 @@ Powered by Vercel
 
 <!-- by 梁展毓 -->
 
+<<<<<<< HEAD
+## 开发指南
+
+### 代码结构说明
+
+以下是项目目录结构及各个文件夹/文件的作用说明：
+
+# 项目结构
+
+项目根目录
+
+- public
+  - favicon.png      # 网站图标，显示在浏览器标签页中。
+  - index.html       # 主 HTML 文件，作为应用程序的入口点。
+  - 其他静态资源/     # 不需要处理的静态资源（如图片、图标）。
+
+- src
+  - assets        # 存放静态资源，如图片、字体和样式表。
+  - components    # 可复用的 Vue.js 组件。
+    - Header.vue   # 头部组件，处理顶部导航栏。
+    - Footer.vue   # 底部组件，显示页面底部内容。
+    - ...          # 其他共享组件。
+  - views         # 包含显示给用户的主要页面。
+    - Home.vue     # 主页面视图。
+    - Topic.vue    # 显示特定平台热点话题的页面。
+    - ...          # 其他页面视图。
+  - services      # 用于处理后端通信的 API 服务文件。
+    - api.js       # 包含 HTTP 请求逻辑，用于从服务器获取数据。
+    - utils.js     # API 响应处理的工具函数。
+  - App.vue          # 根 Vue.js 组件，作为应用程序的入口点。
+  - main.js          # 主 JavaScript 文件，初始化 Vue 应用。
+  - router.js        # 处理应用的路由和页面导航。
+
+- tests             # 包含项目的单元测试和集成测试。
+  - components/      # 针对单个组件的测试。
+  - views/           # 针对主要页面的测试。
+  - ...              # 其他测试文件。
+
+- .github           # GitHub 配置文件。
+  - ISSUE_TEMPLATE/  # GitHub 问题模板。
+  - workflows/       # CI/CD 自动化测试和部署的工作流。
+  - ...              # 其他 GitHub 相关文件。
+
+- package.json         # 项目元数据和依赖管理。
+- pnpm-lock.yaml       # 锁定文件，确保依赖版本一致。
+- README.md            # 项目的主要文档。
+
+此结构保证了关注点的分离，使项目更易于维护和扩展。
+<!-- by 沈家昊-->
+=======
+>>>>>>> upstream/master
 
 <!-- by 程俊豪 -->
 今日热榜用户指南（User Guide）
